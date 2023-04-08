@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assingement 06 Math Expression</title>
+</head>
+
+<body>
+    <script>
+        let name = prompt("Please enter your name:");
+        alert("Hello " + name + " welcome to our website!");
+
+        let num = prompt("Please enter a number:");
+        if (num === null || num === "") {
+            num = 5; // Default value is 5
+        }
+
+        document.write("<h1>" + "Multiplication  Table  of " + num + "</h1>");
+
+        // Take input from the user
+        let subject1 = prompt("Enter subject 1 name:");
+        let subject2 = prompt("Enter subject 2 name:");
+        let subject3 = prompt("Enter subject 3 name:");
+
+        let totalMarks = 100;
+        let obtainedMarks1 = parseFloat(prompt("Enter obtained marks for " + subject1));
+        let obtainedMarks2 = parseFloat(prompt("Enter obtained marks for " + subject2));
+        let obtainedMarks3 = parseFloat(prompt("Enter obtained marks for " + subject3));
+
+        // Calculate total marks and percentage
+        let totalObtainedMarks = obtainedMarks1 + obtainedMarks2 + obtainedMarks3;
+        let percentage = (totalObtainedMarks / (totalMarks * 3)) * 100;
+
+        // Display the result in a table
+        document.write(`
+  <table>
+    <thead>
+      <tr>
+        <th>Subject</th>
+        <th>Total Marks</th>
+        <th>Obtained Marks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>${subject1}</td>
+        <td>${totalMarks}</td>
+        <td>${obtainedMarks1}</td>
+      </tr>
+      <tr>
+        <td>${subject2}</td>
+        <td>${totalMarks}</td>
+        <td>${obtainedMarks2}</td>
+      </tr>
+      <tr>
+        <td>${subject3}</td>
+        <td>${totalMarks}</td>
+        <td>${obtainedMarks3}</td>
+      </tr>
+      <tr>
+        <td><strong>Total</strong></td>
+        <td><strong>${totalMarks * 3}</strong></td>
+        <td><strong>${totalObtainedMarks}</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Percentage</strong>
+
+            <td colspan="2"><strong>${percentage}%</strong></td>
+  </tr>
+</tbody>  </table>
+`);
+
+    </script>
+</body>
+
+</html>
